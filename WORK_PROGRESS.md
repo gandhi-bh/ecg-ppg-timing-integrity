@@ -15,20 +15,16 @@ changes, and commit it with the work it describes.
   evaluation goals, and expected outcome.
 - Started this dated research log.
 
-### Findings and results
+## 2026-11-12 — Assignment 02: Literature review and first hypothesis
 
-- This assignment documents the research plan only.
-- No experiment has been run in this repository and no research result is claimed.
-- The first planned experiment uses synthetic event times and requires no sensors.
+**Contributor:** Bhargav Gandhi, with Codex-assisted literature research and writing.
 
-### Blockers and open questions
+### Work completed
 
-- Public recording selection and related-work review remain future tasks.
-- We still need to investigate which extra information could distinguish clock
-  drift from a real physiological timing change.
-
-### Next steps
-
-- Bhargav reviews these two documents and submits Assignment 01.
-- Review related research and refine the testable hypothesis before implementing
-  the first experiment.
+- Compared hardware timing, common-signal alignment, beat-pattern regression,
+  nonlinear variability alignment, and device-artifact correction approaches.
+- Recorded seven primary sources with reading coverage and access limitations.
+- Defined H1, a controlled clock-drift versus physiological-change test, with
+  explicit inputs, controls, metrics, and predicted outcomes.
+- Added the [research note](docs/research/assignment-02-literature-and-hypothesis.md)
+  and linked it from the README.
