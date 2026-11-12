@@ -70,6 +70,8 @@ An improvement is a research possibility, not a guaranteed outcome.
 
 - `README.md`: project question, scope, and intended outcome.
 - `WORK_PROGRESS.md`: dated work record, findings, blockers, and next steps.
+- [Assignment 02 research note](docs/research/assignment-02-literature-and-hypothesis.md):
+  existing approaches, their limits, and our first precisely specified hypothesis.
 - `.gitignore`: rules for keeping generated or private files out of Git.
 
 Experiment code and run instructions will be added in a later assignment.
