@@ -6,7 +6,7 @@ Research on correcting ECG–PPG timing errors while preserving physiological ti
 
 - **Research vertical:** Sensing & Perception
 - **Contributor:** Bhargav Gandhi
-- **Status:** Research planning; no experimental results yet in this repository.
+- **Status:** First synthetic experiment implemented and checked against its analytical predictions.
 
 ## The idea in simple language
 
@@ -30,9 +30,9 @@ may erase a genuine change in that delay. We will test this using examples
 where we know which changes come from the simulated clock and which come
 from the simulated physiology.
 
-## First planned experiment
+## First experiment
 
-Start with computer-generated event times, rather than full sensor waveforms:
+Uses computer-generated event times, rather than full sensor waveforms:
 
 1. Create an example with a constant physiological delay and a drifting clock.
 2. Create another with a changing physiological delay and an accurate clock.
@@ -40,7 +40,7 @@ Start with computer-generated event times, rather than full sensor waveforms:
 4. Apply a simple correction that removes the observed trend.
 5. Measure whether it removes clock error or accidentally removes physiological change.
 
-This will illustrate an ambiguity in the timing information. It will not prove
+This illustrates an ambiguity in the timing information. It does not prove
 that every synchronization method fails, or establish a new clinical finding.
 
 ## Data and equipment
@@ -69,12 +69,53 @@ An improvement is a research possibility, not a guaranteed outcome.
 ## Repository contents
 
 - `README.md`: project question, scope, and intended outcome.
-- `WORK_PROGRESS.md`: dated work record, findings, blockers, and next steps.
+- `WORK_PROGRESS.md`: dated record of completed work.
 - [Assignment 02 research note](docs/research/assignment-02-literature-and-hypothesis.md):
   existing approaches, their limits, and our first precisely specified hypothesis.
 - `.gitignore`: rules for keeping generated or private files out of Git.
+- `experiments/`: synthetic experiment and plotting code.
+- `tests/`: analytical and reproducibility checks.
+- [Assignment 03 results](docs/research/assignment-03-results.md): measured results,
+  interpretation, and limitations.
 
-Experiment code and run instructions will be added in a later assignment.
+## Run Assignment 03
+
+Use Python 3.12. From the repository root, create an isolated environment once:
+
+```bash
+python -m venv .venv
+```
+
+In Git Bash on Windows:
+
+```bash
+source .venv/Scripts/activate
+```
+
+On macOS/Linux, use `source .venv/bin/activate` instead. Then run:
+
+```bash
+python -m pip install -r requirements.txt
+python -m unittest discover -s tests -v
+python -m experiments.paired_timing
+```
+
+Outputs are written to `results/assignment-03/`: `metrics.csv`, `events.csv`,
+`summary.json`, and PNG/SVG figures. This generated directory is ignored by Git;
+a curated result snapshot is linked in the report. The summary records settings,
+source hashes, and runtime versions. Use `--output-dir PATH` to keep a separate run.
+
+For numerical results without plotting dependencies:
+
+```bash
+python -m experiments.paired_timing --no-plot
+```
+
+The local Windows environment for the first run used Python 3.12.7.
+`.github/workflows/research-ci.yml` runs the tests and full experiment on pushes
+to `main`/`assignment-*` and PRs targeting `main`. Hosted CI must pass before merging;
+local test results do not establish the hosted result.
+See [GitHub Actions documentation](https://docs.github.com/en/actions/get-started/quickstart).
 
 ## Working process
 

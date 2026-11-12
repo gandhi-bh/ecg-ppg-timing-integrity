@@ -218,3 +218,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Reproducible experiment outputs; curated reports are tracked under docs/.
+/results/

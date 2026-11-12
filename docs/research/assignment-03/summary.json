@@ -1,0 +1,72 @@
+{
+  "experiment": "assignment-03-paired-timing",
+  "specification": "docs/research/assignment-02-literature-and-hypothesis.md#6-one-precise-testable-hypothesis-h1",
+  "settings": {
+    "event_pairs_per_scenario": 601,
+    "duration_s": 600,
+    "initial_pat_ms": 200,
+    "trend_ms_per_s": 0.1,
+    "noise_ms": 0,
+    "random_seed": null,
+    "randomness": "none",
+    "model": "additive event-time model; known beat correspondence"
+  },
+  "provenance": {
+    "python_version": "3.12.7",
+    "experiment_source_sha256": "4ca367f0c909c4c78657553db62488076ed836b01d73b8a304e47df2a553eb9a",
+    "matplotlib_version": "3.9.2",
+    "numpy_version": "1.26.4",
+    "plot_source_sha256": "13147d63125585b4a37a826eaa5cc8dda668a0308489a6154f6b04427d4ede10"
+  },
+  "observations_identical": true,
+  "metrics": [
+    {
+      "scenario": "A_clock_drift",
+      "method": "no_correction",
+      "pat_mae_ms": 30.0,
+      "endpoint_error_ms": 60.0,
+      "change_distortion_ms": 60.0
+    },
+    {
+      "scenario": "A_clock_drift",
+      "method": "slope_removal",
+      "pat_mae_ms": 7.566511662004395e-16,
+      "endpoint_error_ms": 0.0,
+      "change_distortion_ms": 0.0
+    },
+    {
+      "scenario": "A_clock_drift",
+      "method": "oracle",
+      "pat_mae_ms": 7.566511662004395e-16,
+      "endpoint_error_ms": 0.0,
+      "change_distortion_ms": 0.0
+    },
+    {
+      "scenario": "B_physiological_change",
+      "method": "no_correction",
+      "pat_mae_ms": 0.0,
+      "endpoint_error_ms": 0.0,
+      "change_distortion_ms": 0.0
+    },
+    {
+      "scenario": "B_physiological_change",
+      "method": "slope_removal",
+      "pat_mae_ms": 30.0,
+      "endpoint_error_ms": 60.0,
+      "change_distortion_ms": 60.0
+    },
+    {
+      "scenario": "B_physiological_change",
+      "method": "oracle",
+      "pat_mae_ms": 0.0,
+      "endpoint_error_ms": 0.0,
+      "change_distortion_ms": 0.0
+    }
+  ],
+  "limitations": [
+    "Synthetic event times, not measured signals or full waveforms.",
+    "No noise, missing beats, device delays, or beat-matching errors.",
+    "Oracle uses ground truth unavailable to the other methods.",
+    "Analytical sanity check, not a novel clinical finding or a test of all synchronization methods."
+  ]
+}

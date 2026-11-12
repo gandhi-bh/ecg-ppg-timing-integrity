@@ -28,3 +28,20 @@ changes, and commit it with the work it describes.
   explicit inputs, controls, metrics, and predicted outcomes.
 - Added the [research note](docs/research/assignment-02-literature-and-hypothesis.md)
   and linked it from the README.
+
+## 2026-11-12 — Assignment 03: Implement the paired timing experiment
+
+**Contributor:** Bhargav Gandhi, with Codex-assisted implementation and validation.
+
+### Work completed
+
+- Implemented the two specified synthetic scenarios, three correction controls,
+  and numerical exports with settings and source hashes.
+- Passed seven analytical, input-validation, and reproducibility tests locally.
+- Measured the predicted 60 ms endpoint error when slope removal erases the
+  physiological change; recorded the full comparison in the
+  [results report](docs/research/assignment-03-results.md).
+- Added an isolated Python environment setup and a GitHub Actions workflow
+  for tests and experiment execution; hosted execution awaits submission.
+- Generated and visually checked the result figure; saved the metric and
+  provenance snapshots and pinned the tested plotting dependencies.
