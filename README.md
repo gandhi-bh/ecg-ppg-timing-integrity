@@ -117,6 +117,14 @@ to `main`/`assignment-*` and PRs targeting `main`. Hosted CI must pass before me
 local test results do not establish the hosted result.
 See [GitHub Actions documentation](https://docs.github.com/en/actions/get-started/quickstart).
 
+## Assignment 04: Independent timing and noise study
+
+Run `python -m experiments.timing_sweep` in the activated environment.
+This evaluates 72 synthetic conditions with 20 seeds each and four methods,
+including correction using two independent, possibly noisy clock measurements.
+See the [research and results report](docs/research/assignment-04-sensitivity.md)
+for the analytical boundary, full metrics, related work, and limitations.
+
 ## Working process
 
 Each assignment uses a branch named `assignment-XX`, followed by a pull request
