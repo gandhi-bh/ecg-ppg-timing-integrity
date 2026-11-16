@@ -1,0 +1,63 @@
+{
+  "conditions": 72,
+  "repeats": 20,
+  "simulation_runs": 1440,
+  "method_evaluations": 5760,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "common_random_numbers": "Same signal noise across conditions for each seed; separate anchor stream seed+100000.",
+  "duration_s": 600,
+  "events": 601,
+  "initial_pat_ms": 200,
+  "parameter_grid": {
+    "pat_slope_ms_s": [
+      -0.1,
+      0,
+      0.1
+    ],
+    "clock_slope_ms_s": [
+      -0.1,
+      0,
+      0.1
+    ],
+    "offset_ms": [
+      0,
+      20
+    ],
+    "noise_sd_ms": [
+      0,
+      5
+    ],
+    "anchor_sd_ms": [
+      0,
+      5
+    ]
+  },
+  "noise": "Independent zero-mean Gaussian event timing noise and independent endpoint anchor errors.",
+  "interpretation": "SD is across synthetic seeds, not a clinical confidence interval. Noise-free repeats are identical, not independent evidence.",
+  "python": "3.12.7",
+  "source_sha256": {
+    "experiments/timing_sweep.py": "dcf5cef680e749d979e4e5608c86070901355a94914d4b0313f8176ce1bd39d7",
+    "experiments/paired_timing.py": "36cff6d87b04d14e844b4bad740262786de7fb3586a8b91bb41f2dee65063475"
+  }
+}

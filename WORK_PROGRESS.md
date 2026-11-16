@@ -45,3 +45,21 @@ changes, and commit it with the work it describes.
   for tests and experiment execution; hosted execution awaits submission.
 - Generated and visually checked the result figure; saved the metric and
   provenance snapshots and pinned the tested plotting dependencies.
+
+## 2026-11-16 — Assignment 04: Independent timing and noise sensitivity
+
+**Contributor:** Bhargav Gandhi, with Codex-assisted research and implementation.
+
+### Work completed
+
+- Expanded the experiment to 72 conditions varying physiological trend, clock
+  trend, clock offset, observation noise, and clock-anchor uncertainty.
+- Evaluated four methods over 20 seeds per condition and saved full metrics,
+  settings, source hashes, and a sensitivity figure.
+- Passed 16 tests locally, retaining the original seven regression checks.
+- Derived the noise-free slope-removal benefit boundary and documented cases
+  where noisy anchors worsen correction or exact endpoints miss nonlinear drift.
+- Reviewed additional related project documentation and the author-lab abstract;
+  recorded provenance and reading limits in the
+  [Assignment 04 report](docs/research/assignment-04-sensitivity.md).
+- Extended CI to execute the sensitivity study.

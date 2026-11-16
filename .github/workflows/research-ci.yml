@@ -25,3 +25,5 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Run experiment including plots
         run: python -m experiments.paired_timing
+      - name: Run independent timing and noise sensitivity study
+        run: python -m experiments.timing_sweep
