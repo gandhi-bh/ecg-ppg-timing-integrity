@@ -1,0 +1,60 @@
+{
+  "record": "s1_sit",
+  "sample_count": 254026,
+  "header_channels": 18,
+  "csv_columns": [
+    "time",
+    "ecg",
+    "peaks",
+    "pleth_1",
+    "pleth_2",
+    "pleth_3",
+    "pleth_4",
+    "pleth_5",
+    "pleth_6",
+    "lc_1",
+    "lc_2",
+    "temp_1",
+    "temp_2",
+    "temp_3",
+    "a_x",
+    "a_y",
+    "a_z",
+    "g_x",
+    "g_y",
+    "g_z"
+  ],
+  "nominal_frequency_hz": 500.0,
+  "nominal_last_sample_s": 508.05,
+  "raw_timestamp_last_minus_first_s": -3786.917295,
+  "timestamp_step_counts_us": {
+    "-4294965296": 1,
+    "2000": 254023,
+    "2001": 1
+  },
+  "timestamp_anomalies": [
+    {
+      "row_index_zero_based": 113094,
+      "delta_us": -4294965296,
+      "consistent_with_32bit_us_wrap": true
+    }
+  ],
+  "raw_timestamps_strictly_increasing": false,
+  "annotated_peak_count": 613,
+  "all_numeric_columns_finite": true,
+  "raw_timestamp_timeline_accepted": false,
+  "nominal_timeline_assumption": "sample index / header frequency; does not prove no dropped samples or clock drift",
+  "selected_ppg": "pleth_3",
+  "signal_units": "native CSV values; no calibration applied",
+  "source": "https://physionet.org/content/pulse-transit-time-ppg/1.1.0/",
+  "source_version": "1.1.0",
+  "input_sha256": {
+    "csv/s1_sit.csv": "25601a60611e01fe138a88829b202c95f047764f5ee232b4d3457df460133391",
+    "s1_sit.hea": "8f4570b9f58c43d9f0bf1dac3eba71d91acd0d85c6bff33067b7db897ae7209f",
+    "SHA256SUMS.txt": "02b3393e8aecc711a6ec56c19c1c3c9bb6ac0048691780f2c815318dd5c3a3de",
+    "LICENSE.txt": "bcdfcd4f31c790e30fb645dc36414907172405897adff329ad379eed85d12017"
+  },
+  "audit_code_sha256": "c65b97fac3cf5dd8bcffee56aa360b2945c5bb3d048c7f09ae5c0c7ca338e417",
+  "license": "Open Data Commons Open Database License v1.0",
+  "license_url": "https://physionet.org/content/pulse-transit-time-ppg/view-license/1.1.0/"
+}

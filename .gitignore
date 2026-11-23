@@ -221,3 +221,6 @@ __marimo__/
 
 # Reproducible experiment outputs; curated reports are tracked under docs/.
 /results/
+
+# Public recordings are downloaded and checksum-verified locally.
+/data/raw/
