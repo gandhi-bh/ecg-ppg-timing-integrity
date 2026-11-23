@@ -132,6 +132,13 @@ This compares nonlinear clock profiles and measurement spacing, selects an
 uncertainty threshold on development seeds, and evaluates it on separate seeds.
 See the [protocol and results](docs/research/assignment-05-selective-correction.md).
 
+## Assignment 06: Equal-budget measurement schedules
+
+Run `python -m experiments.anchor_schedule` in the activated environment.
+Regular and jittered schedules use the same measurement count and the fixed
+Assignment 05 correction rule. See the [protocol and results](docs/research/assignment-06-sampling.md)
+for the 112-condition comparison and its negative result.
+
 ## Working process
 
 Each assignment uses a branch named `assignment-XX`, followed by a pull request

@@ -29,3 +29,5 @@ jobs:
         run: python -m experiments.timing_sweep
       - name: Evaluate nonlinear drift and selective correction
         run: python -m experiments.selective_correction
+      - name: Compare equal-budget anchor schedules
+        run: python -m experiments.anchor_schedule
