@@ -139,6 +139,17 @@ Regular and jittered schedules use the same measurement count and the fixed
 Assignment 05 correction rule. See the [protocol and results](docs/research/assignment-06-sampling.md)
 for the 112-condition comparison and its negative result.
 
+## Assignment 07: Public recording and timestamp audit
+
+Run `python -m experiments.dataset_audit --download` to fetch and verify one
+public ECG/PPG recording. Later runs can omit `--download`. Raw files are ignored
+by Git; results are written to `results/assignment-07/`.
+The audit detected a backward timestamp discontinuity, so this recording fails
+raw-timestamp qualification. This is dataset preparation, not real-data validation
+of our correction method. See the [audit and next experiment](docs/research/assignment-07-dataset-audit.md).
+The command completes even when qualification fails; inspect
+`raw_timestamp_timeline_accepted` in `audit.json`.
+
 ## Working process
 
 Each assignment uses a branch named `assignment-XX`, followed by a pull request

@@ -95,3 +95,15 @@ changes, and commit it with the work it describes.
 - Passed all 32 local tests and added the experiment to CI.
 - Recorded methods, evidence, and limitations in the
   [Assignment 06 report](docs/research/assignment-06-sampling.md).
+
+## 2026-11-23 — Assignment 07: Audit a public ECG/PPG recording
+
+**Contributor:** Bhargav Gandhi, with Codex-assisted implementation and analysis.
+
+### Work completed
+
+- Added a version-pinned downloader and checksum verification for one public recording.
+- Audited sample counts, numeric values, annotations and timestamp continuity.
+- Recorded a backward timestamp discontinuity without modifying source timestamps.
+- Saved the numerical audit, attributed signal figure and source-linked research report.
+- Passed all 43 local tests, including 11 new dataset-audit tests.
