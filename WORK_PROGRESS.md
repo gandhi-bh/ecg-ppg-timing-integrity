@@ -79,3 +79,19 @@ changes, and commit it with the work it describes.
 - Passed all 25 local tests, preserving the previous 16 checks; extended CI.
 - Recorded the hidden-oscillation failure and next research question in the
   [Assignment 05 report](docs/research/assignment-05-selective-correction.md).
+
+## 2026-11-23 — Assignment 06: Compare equal-budget measurement schedules
+
+**Contributor:** Bhargav Gandhi, with Codex-assisted implementation and analysis.
+
+### Work completed
+
+- Compared regular and jittered schedules across 112 conditions and 20 new seeds,
+  retaining equal measurement counts and the fixed Assignment 05 threshold.
+- Saved per-run metrics, aggregates, actual measurement schedules, source hashes,
+  and a comparison figure.
+- Documented the negative result: exposing hidden errors did not consistently
+  improve reconstruction; jitter slightly increased grid-average PAT error.
+- Passed all 32 local tests and added the experiment to CI.
+- Recorded methods, evidence, and limitations in the
+  [Assignment 06 report](docs/research/assignment-06-sampling.md).
