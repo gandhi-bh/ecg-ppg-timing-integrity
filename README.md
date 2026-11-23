@@ -125,10 +125,17 @@ including correction using two independent, possibly noisy clock measurements.
 See the [research and results report](docs/research/assignment-04-sensitivity.md)
 for the analytical boundary, full metrics, related work, and limitations.
 
+## Assignment 05: Nonlinear drift and selective correction
+
+Run `python -m experiments.selective_correction` in the activated environment.
+This compares nonlinear clock profiles and measurement spacing, selects an
+uncertainty threshold on development seeds, and evaluates it on separate seeds.
+See the [protocol and results](docs/research/assignment-05-selective-correction.md).
+
 ## Working process
 
 Each assignment uses a branch named `assignment-XX`, followed by a pull request
-into this repository's `main` branch. Bhargav reviews the work and performs all
-branch creation, staging, commits, pushes, pull requests, and merges.
-Codex assists with explanations and explicitly requested file changes.
+into this repository's `main` branch. Bhargav reviews the work and handles branch
+creation, pushes, pull requests, and merges. Codex implements requested changes,
+runs local checks, and creates local commits under the agreed workflow.
 Every assignment updates `WORK_PROGRESS.md` alongside the work it describes.
