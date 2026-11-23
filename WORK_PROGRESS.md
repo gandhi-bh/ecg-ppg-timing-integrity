@@ -63,3 +63,19 @@ changes, and commit it with the work it describes.
   recorded provenance and reading limits in the
   [Assignment 04 report](docs/research/assignment-04-sensitivity.md).
 - Extended CI to execute the sensitivity study.
+
+## 2026-11-23 — Assignment 05: Nonlinear drift and selective correction
+
+**Contributor:** Bhargav Gandhi, with Codex-assisted implementation and analysis.
+
+### Work completed
+
+- Added five clock profiles, four anchor spacings, and an event-level correction
+  gate based on propagated anchor-measurement uncertainty.
+- Selected the threshold using development seeds and evaluated on disjoint seeds
+  across 160 conditions; saved complete metrics, settings, hashes, and a figure.
+- Measured reduced >1 ms MAE-worsening frequency versus always correcting on this
+  grid; documented residual failures and a tradeoff for linear drift.
+- Passed all 25 local tests, preserving the previous 16 checks; extended CI.
+- Recorded the hidden-oscillation failure and next research question in the
+  [Assignment 05 report](docs/research/assignment-05-selective-correction.md).

@@ -27,3 +27,5 @@ jobs:
         run: python -m experiments.paired_timing
       - name: Run independent timing and noise sensitivity study
         run: python -m experiments.timing_sweep
+      - name: Evaluate nonlinear drift and selective correction
+        run: python -m experiments.selective_correction
